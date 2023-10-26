@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Port</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav
+      class="navbar navbar-expand-md bg-dark sticky-top"
+      data-bs-theme="dark"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">Portfolio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#profile">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#project">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- profile -->
+    <section class="hero text-center p-3 bg-warning" id="profile">
+      <img
+        src="../assets/image/20231012_185629_lmc_8.4~5-removebg.jpg"
+        alt="profile"
+        class="rounded-circle img-thumbnail"
+      />
+      <h1>Muhammad Surya Syahruli</h1>
+      <p>Fullstack Web & Mobile Developer</p>
+    </section>
+
+    <!-- about -->
+    <section class="container p-3 mt-5 mb-5 text-center" id="about">
+      <h2>About me</h2>
+      <p>
+        Vocational School graduate majoring in Computer and Network Engineering
+        (TKJ). Interested in exploring programming by attending Bootcamp at
+        Pijarcamp as a Fullstack Web & Mobile Developer. Have programming skills
+        such as HTML, CSS, JavaScript, PostgreSQL, Express.js, Node.js, and
+        React.js. Have completed several projects at Bootcamp such as
+        E-Commerce.
+      </p>
+    </section>
+
+    <!-- porto -->
+    <section class="text-center p-3 bg-warning" id="project">
+      <h2>My Project</h2>
+      <div class="container pt-3">
+        <div class="row">
+          <div class="col-md p-2">
+            <h6>Blanja Web</h6>
+            <img src="../assets/image/blanja.jpg" alt="blanja" class="w-100" />
+            <p class="m-0">
+              Blanja is an E-Commerce website that is used to make it easier for
+              users to shop without leaving the house, it can be used anytime
+              and anywhere. As a seller you can add, update, and delete products
+              being sold, and as a customer, you can buy goods provided by the
+              seller.
+            </p>
+            <a href="https://blanja-market-web.vercel.app/">Demo</a>
+            <a href="https://github.com/msuryasyahruli/blanja-web">Repo</a>
+          </div>
+          <div class="col-md p-2">
+            <h6>Hirejod Web</h6>
+            <img
+              src="../assets/image/HireJob.JPG"
+              alt="hirejob"
+              class="w-100"
+            />
+            <p class="m-0">
+              Peworld is a website for looking for workers, here there are login
+              and registration features for workers and recruiters. Workers can
+              add their skills, increase their work experience, and add to their
+              portfolios. for recruiters to find workers who match the skills
+              they are looking for.
+            </p>
+            <a href="https://peworld-hirejob-web.vercel.app/">Demo</a>
+            <a href="https://github.com/msuryasyahruli/peworld-web">Repo</a>
+          </div>
+          <div class="col-md p-2">
+            <h6>Food Recipe Web (Team Project)</h6>
+            <img
+              src="../assets/image/food recep.jpg"
+              alt="food recipe"
+              class="w-100"
+            />
+            <p class="m-0">
+              Recipe is a website-based application, where users can search for
+              something recipes that the user wants and users can also add
+              recipes.
+            </p>
+            <a href="https://team-project-kelompok1-pijar-frontend.vercel.app"
+              >Demo</a
+            >
+            <a
+              href="https://github.com/vineas/team-project_kelompok1_pijar_frontend"
+              >Repo</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section class="container p-3" id="contact">
+      <div class="text-center">
+        <h2>Contant me</h2>
+      </div>
+      <div class="row justify-content-center">
+        <form class="col-md-6">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="textarea" class="form-label">Message</label>
+            <textarea class="form-control" id="textarea" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- hover -->
+    <div class="bg-danger p-3 text-center">
+      <p class="m-0">
+        Created by
+        <a href="https://github.com/msuryasyahruli">msuryasyahruli</a>
+      </p>
+    </div>
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

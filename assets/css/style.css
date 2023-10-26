@@ -1,0 +1,11 @@
+.hero {
+    background-image: url("../image/MacBook\ Air\ 2022\ Wallpaper\ 1\ YTECHB.png");
+}
+
+.hero img {
+  width: 200px;
+}
+
+section {
+  scroll-margin-top: 55px;
+}
