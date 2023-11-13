@@ -9,3 +9,10 @@
 section {
   scroll-margin-top: 55px;
 }
+
+.skill{
+  width: fit-content;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 5px;
+}
