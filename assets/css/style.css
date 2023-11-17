@@ -1,18 +1,47 @@
-.hero {
+/* .hero {
   background-image: url("../image/MacBook\ Air\ 2022\ Wallpaper\ 1\ YTECHB.png");
+} */
+
+.bg{
+  height: 400px;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+  filter: brightness(15%);
 }
 
 .hero img {
-  width: 200px;
+  width: 300px;
 }
 
 section {
   scroll-margin-top: 55px;
 }
 
-.skill{
+.skill {
   width: fit-content;
   padding: 10px;
   border-radius: 15px;
   margin: 5px;
+  background-color: rgb(73, 65, 65);
+}
+
+.imgporto {
+  transition: 0.5s ease;
+}
+
+.imgporto:hover {
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+  transition: 0.5s ease;
+}
+.about{
+  max-width: 800px;
+}
+
+@media only screen and (max-width: 767px) {
+  .bg{
+    height: 500px;
+  }
 }
