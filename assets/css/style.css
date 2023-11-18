@@ -28,6 +28,8 @@ section {
 
 .imgporto {
   transition: 0.5s ease;
+  height: 180px;
+  object-fit: cover;
 }
 
 .imgporto:hover {
@@ -43,5 +45,11 @@ section {
 @media only screen and (max-width: 767px) {
   .bg{
     height: 500px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .bg{
+    height: 450px;
   }
 }
