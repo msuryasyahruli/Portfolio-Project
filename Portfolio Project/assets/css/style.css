@@ -2,8 +2,12 @@
   background-image: url("../image/MacBook\ Air\ 2022\ Wallpaper\ 1\ YTECHB.png");
 } */
 
-.bg{
-  height: 400px;
+/* .navbar {
+  position: sticky;
+} */
+
+.bg {
+  height: 100vh;
   object-fit: cover;
   position: absolute;
   z-index: -1;
@@ -15,7 +19,7 @@
 }
 
 section {
-  scroll-margin-top: 55px;
+  scroll-margin-top: 30px;
 }
 
 .skill {
@@ -38,18 +42,56 @@ section {
   transform: scale(0.9);
   transition: 0.5s ease;
 }
-.about{
+.about {
   max-width: 800px;
 }
 
-@media only screen and (max-width: 767px) {
-  .bg{
+/* @media only screen and (max-width: 767px) {
+  .bg {
     height: 500px;
   }
 }
 
 @media only screen and (max-width: 360px) {
-  .bg{
+  .bg {
     height: 450px;
+  }
+} */
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  transition: opacity 0.75s, visibility 0.75s;
+  z-index: 100;
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #ddd;
+  border-top-color: blue;
+  border-radius: 50%;
+  animation: spin 0.75s ease infinite;
+}
+
+@keyframes spin {
+  form {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
   }
 }
