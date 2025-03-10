@@ -12,9 +12,15 @@ const Layout = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
+    const handleLoad = () => {
       setIsLoading(false);
-    }, 2000);
+    };
+  
+    window.addEventListener("load", handleLoad);
+  
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
   }, []);
 
   return (

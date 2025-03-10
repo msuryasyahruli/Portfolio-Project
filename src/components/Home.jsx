@@ -4,7 +4,7 @@ import { FiDownload, FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
 const Home = () => {
   return (
     <section
-      id="home"
+      id="profile"
       className="container mx-auto min-h-screen flex justify-center items-center p-4 pt-16 relative sm:items-start sm:flex-col"
     >
       <div className="max-w-[600px]">
@@ -62,7 +62,7 @@ const Home = () => {
       </div>
       <div className="right-4 md:absolute sm:w-full h-full flex items-center sm:p-8">
         <img
-          src={require("../assets/profile/pic3.jpeg")}
+          src={require("../assets/profile/pic4.jpeg")}
           alt="profile"
           className="w-96 mx-auto rounded-2xl"
         />

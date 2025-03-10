@@ -3,7 +3,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState("home");
+  const [activeItem, setActiveItem] = useState("profile");
 
   useEffect(() => {
     const handleResize = () => {
@@ -30,7 +30,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "skills", "projects", "contact"];
+      const sections = ["profile", "about", "skills", "projects", "contact"];
       sections.forEach((section) => {
         const element = document.getElementById(section);
         if (element) {
@@ -78,7 +78,7 @@ const Header = () => {
 
         <div className={`flex items-center h-full ${!isOpen && "sm:hidden"} `}>
           <nav className="flex sm:flex-col  w-full text-center">
-            {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+            {["Profile", "About", "Skills", "Projects", "Contact"].map((item) => (
               <a
                 key={item}
                 href={`/#${item.toLowerCase()}`}
