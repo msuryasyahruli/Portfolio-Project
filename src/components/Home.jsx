@@ -64,8 +64,7 @@ const Home = () => {
           </a>
         </motion.div>
         <a
-          href="public/CV_MuhammadSuryaSyahruli.pdf"
-          download="CV_MuhammadSuryaSyahruli.pdf"
+          href="https://drive.google.com/file/d/1aUubEASo_56z9PT_IbpUAUHtFJVX2w7U/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-[#00abf0] flex items-center gap-2 w-fit p-3 sm:p-2 mt-4 font-semibold text-[#081b29] rounded-lg hover:bg-[#00c4f0] active:scale-95 transition-transform"
