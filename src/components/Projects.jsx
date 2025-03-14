@@ -21,7 +21,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="container mx-auto py-16 px-4">
-      <p className="text-4xl font-semibold mb-12 text-center">My Projects</p>
+      <p className="text-4xl font-semibold mb-12 text-center">My projects</p>
       <div className="grid grid-cols-4 gap-4 md:grid-cols-3 sm:grid-cols-2">
         {projects.map((data, i) => (
           <div
@@ -76,7 +76,7 @@ const Projects = () => {
         onClose={() => setIsModalOpen(false)}
         title={payload?.title}
       >
-        <p>{payload?.decription}</p>
+        {payload?.decription}
       </Modal>
     </section>
   );

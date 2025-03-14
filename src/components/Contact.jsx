@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [payload, setPayload] = useState({
     name: "",
-    email: "",
+    title: "",
     message: "",
   });
 
@@ -18,22 +19,20 @@ const Contact = () => {
     setLoading(true);
 
     try {
-      // await emailjs.send(
-      //   "YOUR_SERVICE_ID", // Ganti dengan SERVICE_ID dari EmailJS
-      //   "YOUR_TEMPLATE_ID", // Ganti dengan TEMPLATE_ID dari EmailJS
-      //   {
-      //     name: payload.name,
-      //     email: payload.email,
-      //     message: payload.message,
-      //   },
-      //   "YOUR_PUBLIC_KEY" // Ganti dengan PUBLIC_KEY dari EmailJS
-      // );
-      console.log(payload);
-
-      setPayload({ name: "", email: "", message: "" });
+      await emailjs.send(
+        "service_71mptoc", // Ganti dengan SERVICE_ID dari EmailJS
+        "template_70y8ifg", // Ganti dengan TEMPLATE_ID dari EmailJS
+        {
+          title: payload.title,
+          name: payload.name,
+          message: payload.message,
+        },
+        "StH1dH8iVRQp2VslJ" // Ganti dengan PUBLIC_KEY dari EmailJS
+      );
     } catch (err) {
       console.error("Failed to send message. Please try again.");
     } finally {
+      setPayload({ name: "", title: "", message: "" });
       setLoading(false);
     }
   };
@@ -49,22 +48,22 @@ const Contact = () => {
           <input
             type="text"
             className="bg-[#1d1d1d] p-4 rounded-lg outline-[#00abf0]"
-            placeholder="name"
+            placeholder="Title"
+            value={payload.title}
+            onChange={(e) => handleChange("title", e.target.value)}
+            required
+          />
+          <input
+            type="text"
+            className="bg-[#1d1d1d] p-4 rounded-lg outline-[#00abf0]"
+            placeholder="Name"
             value={payload.name}
             onChange={(e) => handleChange("name", e.target.value)}
             required
           />
-          <input
-            type="email"
-            className="bg-[#1d1d1d] p-4 rounded-lg outline-[#00abf0]"
-            placeholder="email"
-            value={payload.email}
-            onChange={(e) => handleChange("email", e.target.value)}
-            required
-          />
           <textarea
             className="bg-[#1d1d1d] h-48 p-4 rounded-lg outline-[#00abf0]"
-            placeholder="message"
+            placeholder="Message"
             value={payload.message}
             onChange={(e) => handleChange("message", e.target.value)}
             required

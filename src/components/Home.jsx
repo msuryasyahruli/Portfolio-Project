@@ -1,5 +1,7 @@
 import React from "react";
 import { FiDownload, FiGithub, FiInstagram, FiLinkedin } from "react-icons/fi";
+import { motion } from "framer-motion";
+import pic from "../assets/profile/pic4.jpeg";
 
 const Home = () => {
   return (
@@ -7,49 +9,64 @@ const Home = () => {
       id="profile"
       className="container mx-auto min-h-screen flex justify-center items-center p-4 pt-16 relative sm:items-start sm:flex-col"
     >
-      <div className="max-w-[600px]">
-        <p className="text-5xl font-bold sm:text-3xl mb-2">
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }} 
+        animate={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 0.8 }}
+        className="max-w-[600px]"
+      >
+        <motion.p 
+          initial={{ opacity: 0, x: -50 }} 
+          animate={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-5xl font-bold sm:text-3xl mb-2"
+        >
           Hi, I'm Muhammad Surya Syahruli
-        </p>
-        <p className="text-3xl font-bold text-[#00abf0] sm:text-xl">
+        </motion.p>
+        <motion.p 
+          initial={{ opacity: 0, x: -50 }} 
+          animate={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-3xl font-bold text-[#00abf0] sm:text-xl"
+        >
           Fullstack Web & Mobile Developer
-        </p>
-        <p>
+        </motion.p>
+        <motion.p 
+          initial={{ opacity: 0, x: -50 }} 
+          animate={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
           I am a Fullstack Web & Mobile Developer with experience in building
           various web and mobile applications. Skilled in React.js, Next.js,
           React Native, and modern technologies, I focus on creating efficient,
           responsive, and user-friendly digital solutions.
-        </p>
-        <div className="mt-2">
-          <a
-            href="https://github.com/msuryasyahruli"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        </motion.p>
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.8 }} 
+          animate={{ opacity: 1, scale: 1 }} 
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-2"
+        >
+          <a href="https://github.com/msuryasyahruli" target="_blank" rel="noopener noreferrer">
             <button className="me-2 p-1 rounded-md border border-[#00abf0] hover:bg-black">
               <FiGithub />
             </button>
           </a>
-          <a
-            href="https://www.linkedin.com/in/muhammad-surya-syahruli/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.linkedin.com/in/muhammad-surya-syahruli/" target="_blank" rel="noopener noreferrer">
             <button className="me-2 p-1 rounded-md border border-[#00abf0] hover:bg-[#0077B5]">
               <FiLinkedin />
             </button>
           </a>
-          <a
-            href="https://www.instagram.com/m_ss.18/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.instagram.com/m_ss.18/" target="_blank" rel="noopener noreferrer">
             <button className="me-2 p-1 rounded-md border border-[#00abf0] hover:bg-gradient-to-br from-[#4f5bd5] to-[#feda75]">
               <FiInstagram />
             </button>
           </a>
-        </div>
-        <a
+        </motion.div>
+        <motion.a 
+          initial={{ opacity: 0, scale: 0.8 }} 
+          animate={{ opacity: 1, scale: 1 }} 
+          transition={{ duration: 0.8, delay: 1 }}
           href="public/CV_MuhammadSuryaSyahruli.pdf"
           download="CV_MuhammadSuryaSyahruli.pdf"
           target="_blank"
@@ -58,15 +75,16 @@ const Home = () => {
         >
           <p>Download CV</p>
           <FiDownload />
-        </a>
-      </div>
-      <div className="right-4 md:absolute sm:w-full h-full flex items-center sm:p-8">
-        <img
-          src={require("../assets/profile/pic4.jpeg")}
-          alt="profile"
-          className="w-96 mx-auto rounded-2xl"
-        />
-      </div>
+        </motion.a>
+      </motion.div>
+      <motion.div 
+        initial={{ opacity: 0, x: 50 }} 
+        animate={{ opacity: 1, x: 0 }} 
+        transition={{ duration: 0.8, delay: 1.2 }}
+        className="right-4 md:absolute sm:w-full h-full flex items-center sm:p-8"
+      >
+        <img src={pic} alt="profile" className="w-96 mx-auto rounded-2xl" />
+      </motion.div>
     </section>
   );
 };
