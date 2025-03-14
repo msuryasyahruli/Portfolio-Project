@@ -63,10 +63,7 @@ const Home = () => {
             </button>
           </a>
         </motion.div>
-        <motion.a 
-          initial={{ opacity: 0, scale: 0.8 }} 
-          animate={{ opacity: 1, scale: 1 }} 
-          transition={{ duration: 0.8, delay: 1 }}
+        <a
           href="public/CV_MuhammadSuryaSyahruli.pdf"
           download="CV_MuhammadSuryaSyahruli.pdf"
           target="_blank"
@@ -75,7 +72,7 @@ const Home = () => {
         >
           <p>Download CV</p>
           <FiDownload />
-        </motion.a>
+        </a>
       </motion.div>
       <motion.div 
         initial={{ opacity: 0, x: 50 }} 
