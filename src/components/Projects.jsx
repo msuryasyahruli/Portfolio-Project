@@ -20,18 +20,22 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="container mx-auto py-16 px-4">
-      <p className="text-4xl font-semibold mb-12 text-center">My projects</p>
-      <div className="grid grid-cols-4 gap-4 md:grid-cols-3 sm:grid-cols-2">
+    <section id="projects" className="section-shell">
+      <div className="mb-12 text-center">
+        <p className="eyebrow">Selected work</p>
+        <p className="section-title">My projects</p>
+        <div className="section-rule mx-auto" />
+      </div>
+      <div className="grid grid-cols-4 gap-5 lg:grid-cols-2 sm:grid-cols-1">
         {projects.map((data, i) => (
           <div
             key={i}
-            className="relative overflow-hidden rounded-xl shadow-lg group aspect-square"
+            className="relative overflow-hidden rounded-2xl shadow-lg shadow-black/20 group aspect-[1.15] border border-white/10"
           >
             <img
               src={data?.image}
               alt="project"
-              className="transition-transform group-hover:scale-110 duration-200 object-cover h-full"
+              className="transition-transform group-hover:scale-110 duration-500 object-cover h-full w-full"
             />
             <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/75 to-transparent hover:from-black/85 hover:to-black/15">
               <div className="p-3 w-full">

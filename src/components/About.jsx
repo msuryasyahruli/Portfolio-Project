@@ -4,16 +4,16 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-[#00abf0] min-h-screen flex justify-center items-center rounded-3xl"
+      className="bg-[#00abf0] text-[#081b29] rounded-[2rem] mx-3 md:mx-6"
     >
-      <div className="container m-auto flex items-center sm:flex-col p-4 gap-6">
+      <div className="container m-auto flex items-center sm:flex-col p-8 md:p-16 gap-12 max-w-6xl">
         <img
           src={require("../assets/profile/pic3.jpeg")}
           alt="profile"
-          className="w-96 rounded-2xl mx-auto"
+          className="w-full max-w-sm rounded-2xl mx-auto shadow-2xl shadow-[#081b29]/20"
         />
-        <div className="text-[#081b29] rounded-lg">
-          <p className="text-4xl font-semibold mb-4 border-b-2 border-[#081b29]">
+        <div className="text-[#081b29] rounded-lg max-w-2xl">
+          <p className="text-4xl font-semibold mb-5 border-b-2 border-[#081b29] pb-3">
             About me
           </p>
           <p>

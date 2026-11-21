@@ -40,14 +40,15 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="px-4 flex items-center justify-center h-screen"
+      className="section-shell flex items-center justify-center min-h-screen"
     >
-      <div className="w-[32rem] text-center">
-        <p className="text-4xl font-semibold mb-8">Contact me</p>
+      <div className="glass-panel w-full max-w-2xl text-center rounded-3xl p-8 md:p-12">
+        <p className="eyebrow">Let’s connect</p>
+        <p className="section-title mb-8">Contact me</p>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
             type="text"
-            className="bg-[#1d1d1d] p-4 rounded-lg outline-[#00abf0]"
+            className="bg-black/20 border border-white/10 p-4 rounded-xl outline-[#00abf0] placeholder:text-gray-500"
             placeholder="Title"
             value={payload.title}
             onChange={(e) => handleChange("title", e.target.value)}
@@ -55,14 +56,14 @@ const Contact = () => {
           />
           <input
             type="text"
-            className="bg-[#1d1d1d] p-4 rounded-lg outline-[#00abf0]"
+            className="bg-black/20 border border-white/10 p-4 rounded-xl outline-[#00abf0] placeholder:text-gray-500"
             placeholder="Name"
             value={payload.name}
             onChange={(e) => handleChange("name", e.target.value)}
             required
           />
           <textarea
-            className="bg-[#1d1d1d] h-48 p-4 rounded-lg outline-[#00abf0]"
+            className="bg-black/20 border border-white/10 h-48 p-4 rounded-xl outline-[#00abf0] placeholder:text-gray-500"
             placeholder="Message"
             value={payload.message}
             onChange={(e) => handleChange("message", e.target.value)}
